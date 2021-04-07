@@ -17,7 +17,7 @@ def index():
     uptime = uptime_row[1].split(",")
     uptime = uptime[0] + "," + uptime[1]
 
-    return render_template("index.html", TXT_CONFIRM= language["TXT_CONFIRM"], TXT_RUNTIME=language["TXT_RUNTIME"], uptime_finally=uptime, temperatur=temp, TXT_TEMPERATURE=language["TXT_TEMPERATURE"], cpuusage_final=cpuusage, TXT_USAGE=language["TXT_USAGE"], TXT_CLOCK=language["TXT_CLOCK"], clock_final=clock, TXT_RESTART_2=language["TXT_RESTART_2"], TXT_SHUTDOWN_2=language["TXT_SHUTDOWN_2"])
+    return render_template("index.html", TXT_CONFIRM= language["TXT_CONFIRM"], TXT_RUNTIME=language["TXT_RUNTIME"], uptime_finally=uptime, temperatur=temp, TXT_TEMPERATURE=language["TXT_TEMPERATURE"], cpuusage_final=cpuusage, TXT_USAGE=language["TXT_USAGE"], TXT_CLOCK=language["TXT_CLOCK"], clock_final=clock, TXT_RESTART_2=language["TXT_RESTART_2"], TXT_SHUTDOWN_2=language["TXT_SHUTDOWN_2"], TXT_SHUTDOWN_1=language["TXT_SHUTDOWN_1"], TXT_RESTART_1=language["TXT_RESTART_1"])
 @app.route("/shutdown/<wich>")
 def reboot(wich):
     if wich == "shutdown":
@@ -29,4 +29,4 @@ def reboot(wich):
     else:
         return "error"
 
-app.run(debug=True)
+app.run(host="192.168.100", debug=True)
