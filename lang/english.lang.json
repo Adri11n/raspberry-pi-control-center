@@ -1,0 +1,11 @@
+{
+  "TXT_CONFIRM": "Do you really want your System to",
+  "TXT_RUNTIME": "Runtime",
+  "TXT_RESTART_1": "reboot",
+  "TXT_RESTART_2": "Reboot",
+  "TXT_SHUTDOWN_1": "shutdown",
+  "TXT_SHUTDOWN_2": "Shutdown",
+  "TXT_TEMPERATURE": "Temperature",
+  "TXT_CLOCK": "Clock",
+  "TXT_USAGE": "Processor Load"
+}
