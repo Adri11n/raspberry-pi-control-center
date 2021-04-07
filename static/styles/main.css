@@ -1,0 +1,85 @@
+body{
+	background: #333333;
+	overflow: hidden;
+	font-family: sans;
+}
+
+div#container{
+	width: 800px;
+	height: 400px;
+	margin: 100px auto 10px auto;
+	background: #FFFFFF;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px #000000;
+}
+
+div#container img#logo{
+	position: relative;
+	top: -36px;
+	width: 128px;
+	margin: 0px 0px 0px 50px;
+}
+
+div#container img#loader{
+	position: relative;
+	left: 350px;
+}
+
+div#container p.action{
+	display: block;
+	text-align: center;
+	font-size: 24px;
+	text-shadow: 1px 1px 2px #000000;
+}
+
+div#container div#title{
+	float: right;
+	font-family: sans;
+	font-size: 32px;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #000000;
+	margin: 20px 70px 10px 0px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+div#container div#uptime{
+	display: block;
+	text-align: right;
+	font-family: sans;
+	margin: -50px 70px 50px 0px;
+}
+
+div#container div#tempgauge{
+	float: left;
+	margin: -50px 0px 25px 35px;
+	height: 290px;
+	width: 360px;
+}
+
+div#container div#voltgauge{
+	float: left;
+	margin: -25px 0px 25px 0px;
+	height: 125px;
+	width: 180px;
+}
+
+div#container div#clockgauge{
+	float: left;
+	margin: -25px 0px 25px 0px;
+	height: 125px;
+	width: 180px;
+}
+
+div#container div#cpugauge{
+	float: left;
+	margin: -25px 0px 25px 0px;
+	height: 125px;
+	width: 180px;
+}
+
+div#container div#controls{
+	margin: 0px 64px 0px 0px;
+	float: right;
+	text-align: center;
+}
+
