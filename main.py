@@ -8,10 +8,9 @@ def index():
         language = json.load(conf)
 
     temp = os.popen("cat /sys/class/thermal/thermal_zone*/temp").read()
-    temp = int(temp) / 1000
-    temp = round(temp)
+    temp = round(int(temp) / 1000)
     clock = os.popen('cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq').read()
-    clock = int(clock) / 1000
+    clock = round(int(clock) / 1000)
     cpuusage = os.popen("vmstat | tail -1 | awk '{print $15}'").read()
     cpuusage = 100 - int(cpuusage)
     uptime_row = os.popen("uptime").read().split("up")
