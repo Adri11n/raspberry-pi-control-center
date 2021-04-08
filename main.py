@@ -9,6 +9,7 @@ def index():
 
     temp = os.popen("cat /sys/class/thermal/thermal_zone*/temp").read()
     temp = int(temp) / 1000
+    temp = round(temp)
     clock = os.popen('cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq').read()
     clock = int(clock) / 1000
     cpuusage = os.popen("vmstat | tail -1 | awk '{print $15}'").read()
