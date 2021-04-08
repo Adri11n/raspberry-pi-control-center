@@ -29,4 +29,4 @@ def reboot(wich):
     else:
         return "error"
 
-app.run(host="192.168.100", debug=True)
+app.run(host="192.168.2.100", debug=True)
