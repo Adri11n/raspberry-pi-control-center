@@ -5,10 +5,10 @@ import json
 with open("settings.json", "r") as f_in:
     info = json.load(f_in)
 app = Flask(__name__)
-app.config['SECRET_KEY'] = info[flask_secret]
+app.config['SECRET_KEY'] = info["flask_secret"]
 auth = HTTPDigestAuth()
 users = {
-    info[username]: info[password],
+    info["username"]: info["password"],
 }
 @app.route("/")
 def index():
