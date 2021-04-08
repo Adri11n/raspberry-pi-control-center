@@ -21,10 +21,10 @@ def index():
 @app.route("/shutdown/<wich>")
 def reboot(wich):
     if wich == "shutdown":
-        os.system("sudo bash -c \"sleep && /sbin/shutdown -h now\""")
+        os.system("sudo bash -c \"sleep 3 && /sbin/shutdown -h now\""")
         return render_template("shutdown.html")
     elif wich == "reboot":
-        os.system("sudo bash -c \"sleep && /sbin/shutdown -r -h now\"")
+        os.system("sudo bash -c \"sleep 3 && /sbin/shutdown -r -h now\"")
         return render_template("reboot.html")
     else:
         return "error"
