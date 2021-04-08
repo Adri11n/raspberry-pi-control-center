@@ -3,6 +3,7 @@ from flask_httpauth import HTTPDigestAuth
 import os
 import json
 app = Flask(__name__)
+auth = HTTPDigestAuth()
 users = {
     "test": "test",
 }
