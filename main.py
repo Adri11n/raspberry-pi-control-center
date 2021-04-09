@@ -42,4 +42,3 @@ def get_pw(username):
     if username in users:
         return users.get(username)
     return None
-app.run(host="192.168.2.100", debug=True)
