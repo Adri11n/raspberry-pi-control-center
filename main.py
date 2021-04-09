@@ -30,10 +30,10 @@ def index():
 @auth.login_required
 def reboot(wich):
     if wich == "shutdown":
-        os.system("sudo sleep 5 && /sbin/shutdown -h now &")
+        os.system("sudo sleep 5 && /sbin/shutdown now &")
         return render_template("shutdown.html")
     elif wich == "reboot":
-        os.system("sudo sleep 5 && /sbin/shutdown -r -h now &")
+        os.system("sudo sleep 5 && /sbin/shutdown -r now &")
         return render_template("reboot.html")
     else:
         return "error"
