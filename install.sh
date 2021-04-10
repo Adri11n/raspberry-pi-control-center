@@ -1,3 +1,3 @@
-apt install python3 python3-pip apache2 libapache2-mod-wsgi-py3
+apt install python3 python3-pip gunicorn
 pip install Flask
 pip install Flask-HTTPAuth
