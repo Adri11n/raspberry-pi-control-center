@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_httpauth import HTTPDigestAuth
 import os
 import json
+import psutil
 with open("settings.json", "r") as f_in:
     info = json.load(f_in)
 app = Flask(__name__)
@@ -15,10 +16,8 @@ def index():
     with open("english.lang.json") as conf:
         language = json.load(conf)
 
-    temp = os.popen("cat /sys/class/thermal/thermal_zone*/temp").read()
-    temp = round(int(temp) / 1000, 1)
-    clock = os.popen('cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq').read()
-    clock = round(int(clock) / 1000)
+    temp = psutil.sensors_temperatures()["coretemp"][0][1]
+    clock = round(psutil.cpu_freq()[0])
     cpuusage = os.popen("vmstat | tail -1 | awk '{print $15}'").read()
     cpuusage = 100 - int(cpuusage)
     uptime_row = os.popen("uptime").read().split("up")
